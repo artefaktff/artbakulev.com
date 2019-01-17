@@ -37,10 +37,10 @@ def creation(request):
     if request.user.is_authenticated:
         def handle_uploaded_file(f, url):
             try:
-                makedirs('/static/wall/res/' + url + '/images/')
+                makedirs('../static/wall/res/' + url + '/images/')
             except:
                 pass
-            with open('/static/wall/res/' + url + '/images/' + str(f), 'wb+') as destination:
+            with open('../static/wall/res/' + url + '/images/' + str(f), 'wb+') as destination:
                 for chunk in f.chunks():
                     destination.write(chunk)
 
@@ -48,7 +48,7 @@ def creation(request):
             j = 0
             print(len(set_of_images))
             for image in set_of_images:
-                with open('/static/wall/res/' + url + '/images/' + str(j) + '.jpg', 'wb+') as destination:
+                with open('../static/wall/res/' + url + '/images/' + str(j) + '.jpg', 'wb+') as destination:
                     for chunk in image.chunks():
                         destination.write(chunk)
                 j += 1
@@ -71,7 +71,7 @@ def creation(request):
             post['short_url'] = sub(r"'|,|\.|\\| ", '', translit(post['title'], 'ru', reversed=True).lower())
             post['pub_date'] = request.POST['date']
             post['description'] = request.POST['description']
-            post['main_image_link'] = '/wall/res/' + post['short_url'] + '/images/' + str(request.FILES['file'])
+            post['main_image_link'] = '../static/wall/res/' + post['short_url'] + '/images/' + str(request.FILES['file'])
             handle_uploaded_file(request.FILES['file'], post['short_url'])
             number_of_images = handle_uploaded_files(request.FILES.getlist('images'), post['short_url'])
             create_new_post(post, number_of_images)
