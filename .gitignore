@@ -4,6 +4,7 @@
 
 .idea
 artbakulevenv
+setting.py
 
 ### Django ###
 *.log
