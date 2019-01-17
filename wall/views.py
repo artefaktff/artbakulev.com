@@ -29,7 +29,6 @@ def details(request, short_url):
     description = post.description
     for group in re:
         pattern = r'<image ' + group + '>'
-        print(pattern)
         description = sub(pattern, generate_url_for_image(short_url, group), description)
     return render(request, 'wall/details.html', {'post': post, 'description': description})
 
@@ -38,10 +37,10 @@ def creation(request):
     if request.user.is_authenticated:
         def handle_uploaded_file(f, url):
             try:
-                makedirs('wall/static/wall/res/' + url + '/images/')
+                makedirs('/static/wall/res/' + url + '/images/')
             except:
                 pass
-            with open('wall/static/wall/res/' + url + '/images/' + str(f), 'wb+') as destination:
+            with open('/static/wall/res/' + url + '/images/' + str(f), 'wb+') as destination:
                 for chunk in f.chunks():
                     destination.write(chunk)
 
@@ -49,7 +48,7 @@ def creation(request):
             j = 0
             print(len(set_of_images))
             for image in set_of_images:
-                with open('wall/static/wall/res/' + url + '/images/' + str(j) + '.jpg', 'wb+') as destination:
+                with open('/static/wall/res/' + url + '/images/' + str(j) + '.jpg', 'wb+') as destination:
                     for chunk in image.chunks():
                         destination.write(chunk)
                 j += 1
@@ -58,7 +57,7 @@ def creation(request):
         def create_new_post(d, n):
             def create_new_images(pk, url, number):
                 for i in range(n):
-                    img = Image(name=str(i), image_link='wall/static/wall/res/'+url+'/images/' + str(i) + '.jpg',
+                    img = Image(name=str(i), image_link='/static/wall/res/'+url+'/images/' + str(i) + '.jpg',
                                 post=new_post)
                     img.save()
             new_post = Post(title=d['title'], short_url=d['short_url'],
