@@ -71,7 +71,7 @@ def creation(request):
             post['short_url'] = sub(r"'|,|\.|\\| ", '', translit(post['title'], 'ru', reversed=True).lower())
             post['pub_date'] = request.POST['date']
             post['description'] = request.POST['description']
-            post['main_image_link'] = '/static/wall/res/' + post['short_url'] + '/images/' + str(request.FILES['file'])
+            post['main_image_link'] = '/wall/res/' + post['short_url'] + '/images/' + str(request.FILES['file'])
             handle_uploaded_file(request.FILES['file'], post['short_url'])
             number_of_images = handle_uploaded_files(request.FILES.getlist('images'), post['short_url'])
             create_new_post(post, number_of_images)
