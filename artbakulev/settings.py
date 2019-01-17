@@ -25,7 +25,7 @@ SECRET_KEY = 'tcs@qjl09ogp&xg&&3_czki&+=eu%6g0oipwvtmymqoj0!317z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['artbakulev.com', '68.183.2.189','localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['www.artbakulev.com', 'artbakulev.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -80,8 +80,8 @@ DATABASES = {
         'NAME': 'artbakulev',
 	'USER': 'me_db',
 	'PASSWORD': 'artbakulev_me_db',
-	'HOST': '68.183.2.189',
-	'PORT': '5432',
+	'HOST': 'localhost',
+	'PORT': '',
     }
 }
 
