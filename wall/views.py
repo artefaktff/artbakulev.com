@@ -35,7 +35,7 @@ def details(request, short_url):
 
 
 def creation(request):
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         def handle_uploaded_file(f, url):
             try:
                 makedirs('wall/static/wall/res/' + url + '/images/')
