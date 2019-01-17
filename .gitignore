@@ -4,7 +4,7 @@
 
 .idea
 artbakulevenv
-setting.py
+settings.py
 migrations
 
 ### Django ###
