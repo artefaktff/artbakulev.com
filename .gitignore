@@ -5,6 +5,7 @@
 .idea
 artbakulevenv
 setting.py
+migrations
 
 ### Django ###
 *.log
