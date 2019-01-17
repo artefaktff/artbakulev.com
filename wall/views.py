@@ -37,10 +37,10 @@ def creation(request):
     if request.user.is_authenticated:
         def handle_uploaded_file(f, url):
             try:
-                makedirs('../wall/res/' + url + '/images/')
+                makedirs('../static/wall/res/' + url + '/images/')
             except:
                 pass
-            with open('../wall/res/' + url + '/images/' + str(f), 'wb+') as destination:
+            with open('../static/wall/res/' + url + '/images/' + str(f), 'wb+') as destination:
                 for chunk in f.chunks():
                     destination.write(chunk)
 
@@ -48,7 +48,7 @@ def creation(request):
             j = 0
             print(len(set_of_images))
             for image in set_of_images:
-                with open('../wall/res/' + url + '/images/' + str(j) + '.jpg', 'wb+') as destination:
+                with open('../static/wall/res/' + url + '/images/' + str(j) + '.jpg', 'wb+') as destination:
                     for chunk in image.chunks():
                         destination.write(chunk)
                 j += 1
