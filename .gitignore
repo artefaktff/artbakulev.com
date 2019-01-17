@@ -6,7 +6,6 @@
 artbakulevenv
 settings.py
 migrations
-static
 
 ### Django ###
 *.log
