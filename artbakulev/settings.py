@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['artbakulev.com', '68.183.2.189','localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'wall.apps.WallConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
