@@ -8,21 +8,21 @@ $(document).ready(function () {
         back.style.display = 'none';
         top = document.getElementById('forMobileToTop');
         $('#forMobileToTop').on('click', function (e) {
-            e.preventDefault();
-            $('html,body').animate(
-                {scrollTop: 0}, 500);
-        }
-    )
+                e.preventDefault();
+                $('html,body').animate(
+                    {scrollTop: 0}, 500);
+            }
+        )
     }
     else {
         constant_of_opacity = 1;
         top = document.getElementById('toTop');
         $('#toTop').on('click', function (e) {
-            e.preventDefault();
-            $('html,body').animate(
-                {scrollTop: 0}, 500);
-        }
-    )
+                e.preventDefault();
+                $('html,body').animate(
+                    {scrollTop: 0}, 500);
+            }
+        )
     }
     if (window.pageYOffset > 250) {
         header.style.opacity = 0.1;
@@ -40,7 +40,6 @@ $(document).ready(function () {
             top.style.opacity = 0;
         }
     });
-
 
 
 });

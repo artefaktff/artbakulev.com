@@ -14,22 +14,26 @@ $(document).ready(function () {
         e.preventDefault();
         var t = 1000;
         var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
-        var line = document.getElementById('red_line'),
+        var line = document.getElementById('red_line_1'),
             intro_coordinates = document.getElementById('introduction').getBoundingClientRect(),
             height = intro_coordinates.bottom - line.getBoundingClientRect().top;
         $('#rocket').animate({
-                'margin-top': height - 76 + 'px'
+                'margin-top': height - 32 + 'px'
             }, 1000, function () {
                 document.getElementById('rocket').style.marginTop = '30px'
             }
         );
-        $("#red_line").animate({
-            height: height - 32 + 'px'
+        $("#red_line_1").animate({
+            height: height - 36 + 'px'
         }, 1000, function () {
-            document.getElementById('red_line').style.height = '0';
+            document.getElementById('red_line_1').style.height = '0';
+        });
+        $("#red_line_2").animate({
+            height: height - 36 + 'px'
+        }, 1000, function () {
+            document.getElementById('red_line_2').style.height = '0';
         });
         $('html,body').animate(
             {scrollTop: $(d).offset().top}, t);
     });
 });
-

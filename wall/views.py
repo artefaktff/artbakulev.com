@@ -23,7 +23,6 @@ class ListView(generic.ListView):
 
 
 def details(request, short_url):
-    print(request)
     post = Post.objects.all().filter(short_url=short_url)[0]
     re = findall('<image ([0-9]+)>', post.description)
     description = post.description

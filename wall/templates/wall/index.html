@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Artyom Bakulev | Developer & Designer</title>
     <link rel="stylesheet" href="{% static "wall/css/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "wall/css/hover-min.css" %}">
     <link rel="stylesheet" href="{% static "wall/css/bootstrap.min.css" %}" type="text/css">
     <link rel="stylesheet" href="{% static "wall/css/main.css" %}"  type="text/css">
 </head>
@@ -32,11 +33,15 @@
     </div>
     <div id="introduction">
         <div class="centered">
+            <h2>developer</h2>
             <h1>Bakulev Artyom</h1>
-            <h3>Developer + Designer</h3>
-            <div id="red_line"></div>
-            <a href="#portfolio"><i id="rocket" class="fa fa-space-shuttle" aria-hidden="true"></i>
+            <h2>designer</h2>
+            <div class="red_line" id="red_line_1"></div>
+            <div class="red_line" id="red_line_2"></div>
+            <a href="#portfolio"><img src="{% static "wall/images/rocket.png" %}" id="rocket" class="fa fa-space-shuttle hvr-buzz" aria-hidden="true"></img>
             </a>
+
+
         </div>
 
         <div id="parallax"></div>
@@ -54,7 +59,7 @@
                         <a href="works/{{ post.short_url }}/">
                             <div class="work">
                                 <h2>{{ post.title }}</h2>
-                                <p class="description">{{ post.description }} </p>
+                                <p class="description">{{ post.description|safe|escape }} </p>
                                 <img src="{% static post.main_image_link %}">
                             </div>
                         </a>

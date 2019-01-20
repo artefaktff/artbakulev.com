@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Vollkorn+SC')
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Yanone+Kaffeesatz')
 @mixin transition($seconds)
   -moz-transition: $seconds
   -webkit-transition: $seconds
   transition: $seconds
   -o-transition: $seconds
+
+
+.tools
+  color: green
+  font-weight: 600
 
 
 
@@ -19,36 +24,42 @@ a:active
   background: rgba(255, 255, 255, 0.0)
 
 body
-  font-family: 'Vollkorn SC', serif
+  font-family: 'Yanone Kaffeesatz', serif
+  font-size: 20px
+
 @viewport
 
 #info
   z-index: 10000
   text-align: center
-  opacity: 0
+  opacity: 1
   top: 5%
   left: 5%
   position: fixed
   color: black
   font-size: 32px
-  cursor: default
+  cursor: pointer
   +transition(0.3s)
+
 #info:hover
   color: indianred
   +transition(0.3s)
 
 #information
+  z-index: 1000
+  position: fixed
   border-right: 4px solid indianred
   text-align: center
   color: black
-  background-color: white
-  +transition(0.5s)
+  background-color: rgba(255, 255, 255, 0.9)
+
+  +transition(1s)
   display: none
   height: 100vh
   padding-top: 100px
-  position: fixed
   width: 400px
   margin-left: -400px
+
   .aboutMe
     #python
       color: green
@@ -70,24 +81,30 @@ body
   #introduction
     text-align: center
     #rocket
-      //+transition(0.3s)
-      margin-top: 30px
+      position: absolute
+      top: 40vh
+      left: 0
+      right: 0
+      bottom: 0
+      margin: 30px auto
       color: white
-      transform: rotate(90deg)
-      font-size: 64px
-      z-index: 1000
-    #rocket:hover
-      color: lightgrey
-    #red_line
+      z-index: 100
+      height: 80px
+    .red_line
       border-left: 2px solid orange
       border-right: 2px solid orange
       position: absolute
+      top: 40vh
       left: 0
-      right: 5px
-      margin: 30px auto 0
+      bottom: 0
+      margin: 30px auto
       width: 10px
       height: 0
       background-color: orangered
+    #red_line_1
+      right: -15px
+    #red_line_2
+      right: 15px
 
     background: black
     color: white
@@ -106,9 +123,11 @@ body
         display: inline-block
         font-family: 'Dancing Script', cursive
         padding: 10px
+        background-color: rgba(0, 0, 0, 0.5)
         border: 6px solid white
 
-      h3
+      h2
+
         text-decoration: underline
       .btn
         z-index: 1000
@@ -138,24 +157,25 @@ body
       margin-top: 10px
       margin-bottom: 10px
       border: 2px solid lightgrey
-      border-radius: 20px
       border-bottom: 2px solid lightgray
       width: 100%
+      -webkit-box-shadow: 0px 0px 5px 0px  rgba(205,92,92,1)
+      -moz-box-shadow: 0px 0px 5px 0px  rgba(205,92,92,1)
+      box-shadow: 0px 0px 5px 0px rgba(205,92,92,1)
 
-
-      h2
-        text-align: center
-        border-radius: 2px
-        color: black
-        font-weight: 700
-      p
-        margin-top: 10px
-        padding-left: 10px
-        border-left: 3px solid white
-      img
-        border-radius: 20px
-        margin-top: 10px
-        width: 100%
+    h2
+      text-align: center
+      border-radius: 2px
+      color: black
+      font-weight: 700
+    p
+      margin-top: 10px
+      padding-left: 10px
+      border-left: 3px solid white
+    img
+      border-radius: 20px
+      margin-top: 10px
+      width: 100%
 
 header
   z-index: 1000
@@ -179,7 +199,7 @@ header:hover
   opacity: 1
 
 .post
-  text-align: center
+  //text-align: center
   padding-top: 75px
   height: 2000px
   img
