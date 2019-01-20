@@ -7,7 +7,6 @@ let info = $('#info'),
 function checkInfoVisibility() {
     if (window.pageYOffset < intro_bottom) {
         if (information.css('display') === 'block') {
-
             toggleInfo();
 
         }

@@ -132,8 +132,7 @@ body {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     -o-transition: 0.5s;
-    background: url("../images/bg_white.jpg");
-    z-index: 1000; }
+    background: url("../images/bg_white.jpg"); }
     .main #portfolio .work:hover {
       filter: grayscale(0%);
       -webkit-transition: all 1s ease;
