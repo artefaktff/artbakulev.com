@@ -10,7 +10,7 @@ from .models import Post, Image
 
 def generate_url_for_image(url, n):
     path = '/static/wall/res/' + url + '/images/' + n + '.jpg'
-    return '<a href="' + path + '" data-lightbox="set"><img class="lazyload" data-src=' + path + '></a>'
+    return '<a href="' + path + '" data-lightbox="set"><img class="lazyload" ></a>'
 
 
 class ListView(generic.ListView):
