@@ -226,7 +226,7 @@ header:hover {
 
 .post {
   padding-top: 75px;
-  height: 2000px; }
+  height: 100%; }
   .post img {
     margin-top: 15px;
     width: 100%; }
