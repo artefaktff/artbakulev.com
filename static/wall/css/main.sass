@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Yanone+Kaffeesatz')
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Roboto')
 @mixin transition($seconds)
   -moz-transition: $seconds
   -webkit-transition: $seconds
@@ -6,10 +6,12 @@
   -o-transition: $seconds
 
 .tools
-  color: green
-  font-weight: 600
+  font-family: 'Roboto', sans-serif
+  color: indianred
+
 
 a:hover
+  +transition(0.5s)
   text-decoration: none
   color: indianred
 
@@ -21,8 +23,8 @@ a:active
   background: rgba(255, 255, 255, 0.0)
 
 body
-  font-family: 'Yanone Kaffeesatz', serif
-  font-size: 20px
+  font-family: 'Roboto', sans-serif
+  font-size: 18px
 
 @viewport
 
@@ -230,4 +232,6 @@ header:hover
     left: 0
     bottom: 0
     right: 0
+  a
+    text-decoration: underline
 
