@@ -33,3 +33,9 @@ function enableScroll() {
 }
 
 disableScroll();
+
+window.onload = function() {
+    $('#preloader').fadeOut(500);
+    enableScroll();
+    $('#index').css('overflow', 'visible');
+};

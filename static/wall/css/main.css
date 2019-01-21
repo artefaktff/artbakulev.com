@@ -3,10 +3,10 @@
   font-family: "Roboto", sans-serif;
   color: #cd5c5c; }
 
-html {
+#index {
   overflow: hidden; }
 
-.preloader {
+#preloader {
   position: fixed;
   display: flex;
   align-items: center;
@@ -65,19 +65,29 @@ body {
   text-align: center;
   color: black;
   background-color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
   -moz-transition: 1s;
   -webkit-transition: 1s;
   transition: 1s;
   -o-transition: 1s;
   display: none;
   height: 100vh;
-  padding-top: 100px;
+  padding-top: 50px;
   width: 400px;
   margin-left: -400px; }
+  #information .aboutMe .bordered {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid indianred; }
+  #information .aboutMe a {
+    color: indianred;
+    text-decoration: underline; }
+    #information .aboutMe a:hover {
+      color: grey; }
   #information .aboutMe #python {
     color: green; }
   #information .aboutMe p {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
     padding: 0 50px;
     text-align: center; }
